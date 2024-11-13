@@ -1,0 +1,2 @@
+slurmstepd: error: _oom_event_monitor: poll(): Bad address
+/cm/local/apps/slurm/var/spool/job5884963/slurm_script: line 9:  5950 Killed                  python3 ex3.py

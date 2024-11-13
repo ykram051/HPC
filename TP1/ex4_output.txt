@@ -1,0 +1,20 @@
+Matrix Size: 500x500
+Wall time with GPU: 0.99726 seconds
+Wall time with CPU: 1.44060 seconds
+
+
+Matrix Size: 1000x1000
+Wall time with GPU: 0.04884 seconds
+Wall time with CPU: 1.23802 seconds
+
+
+Matrix Size: 2000x2000
+Wall time with GPU: 0.32767 seconds
+Wall time with CPU: 12.24421 seconds
+
+
+Matrix Size: 5000x5000
+Wall time with GPU: 4.39168 seconds
+Wall time with CPU: 226.91171 seconds
+
+

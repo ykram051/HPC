@@ -1,0 +1,5 @@
+
+       JobID         JobName  Partition                        Account                                AllocTRES    CPUTime   TotalCPU     MaxRSS              Submit           State ExitCode    Elapsed 
+------------ --------------- ---------- ------------------------------ ---------------------------------------- ---------- ---------- ---------- ------------------- --------------- -------- ---------- 
+5884965                  ex3     shortq                  cc-cs-account        cpu=19,mem=160G,node=1,billing=19   00:12:59  00:41.414            2024-11-13T13:11:35       COMPLETED      0:0   00:00:41 
+5884965.bat+           batch                             cc-cs-account                      cpu=19,mem=0,node=1   00:12:59  00:41.414  72687840K 2024-11-13T13:12:04       COMPLETED      0:0   00:00:41 
