@@ -4,6 +4,7 @@ import sys
 with open("discriminant.txt", "r") as file:
     D = float(file.read())
 
+
 def calculate_roots(D, a, b):
     if D > 0:
         root1 = (-b + math.sqrt(D)) / (2 * a)
