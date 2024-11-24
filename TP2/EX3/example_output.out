@@ -1,0 +1,19 @@
+example : 
+          ./checking_ressources.sh --cpus 8 --gpus 1 --partition gpu
+output :
+          Checking resources with minimum requirements:
+            CPUs: 8
+            GPUs: 1
+            Partition: gpu
+          Available CPUs: 437
+          Available GPUs in partition 'gpu': 1
+          Node states summary:
+                1 alloc
+                1 drain
+                1 drng
+                1 idle
+                1 mix
+                1 resv
+                1 STATE
+          Jobs in queue for user ikram.benfellah: 0
+          Sufficient resources available. Ready for job submission.
