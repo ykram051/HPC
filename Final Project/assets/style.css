@@ -1,0 +1,378 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', -apple-system, sans-serif;
+    background-color: #f0f2f5;
+    color: #1a1a1a;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Login page styles */
+.login-container {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.login-title {
+    color: #004aad;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.login-label {
+    display: block;
+    margin: 15px 0 8px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e1e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+}
+
+.login-input:focus {
+    border-color: #004aad;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 74, 173, 0.1);
+    background-color: white;
+}
+
+.login-button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 30px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-button:hover {
+    background-color: #003c8f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 74, 173, 0.2);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.login-status {
+    margin-top: 20px;
+    text-align: center;
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Dashboard styles */
+.dashboard-header {
+    background-color: white;
+    padding: 24px 40px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 10;
+}
+
+.dashboard-title {
+    color: #004aad;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.welcome-message {
+    color: #2c3e50;
+    font-size: 18px;
+    margin: 8px 0;
+    font-weight: 500;
+    animation: slideIn 0.5s ease-out;
+}
+
+.logout-button {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 24px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    transform: translateY(calc(-50% - 2px));
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+}
+
+.dashboard-content {
+    padding: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.dropdown-container {
+    margin-bottom: 35px;
+    animation: slideIn 0.5s ease-out;
+}
+
+.dropdown-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.user-dropdown {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Enhanced Dashboard Components */
+.dashboard-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    animation: fadeIn 0.5s ease-out;
+}
+
+.metrics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.metric-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #004aad, #0080ff);
+}
+
+.metric-card h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.metric-card p {
+    color: #004aad;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+/* Data visualization styles */
+.usage-chart, .timeline-chart {
+    height: 400px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 40px 20px;
+        padding: 30px;
+    }
+    
+    .dashboard-header {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .logout-button {
+        position: static;
+        transform: none;
+        margin-top: 15px;
+        width: 100%;
+    }
+    
+    .welcome-message {
+        margin-top: 15px;
+    }
+    
+    .dashboard-content {
+        padding: 20px;
+    }
+    
+    .metrics-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric-card {
+        padding: 20px;
+    }
+    
+    .chart-container {
+        padding: 15px;
+    }
+}
+
+/* Loading and transition states */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #004aad;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Toast notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+}
+
+.toast-success {
+    border-left: 4px solid #28a745;
+}
+
+.toast-error {
+    border-left: 4px solid #dc3545;
+}
+
+/* Dropdown customization */
+.Select-control {
+    border-radius: 10px !important;
+    border: 2px solid #e1e8f0 !important;
+    padding: 4px !important;
+}
+
+.Select-control:hover {
+    border-color: #004aad !important;
+}
+
+.Select.is-focused > .Select-control {
+    border-color: #004aad !important;
+    box-shadow: 0 0 0 4px rgba(0, 74, 173, 0.1) !important;
+}
